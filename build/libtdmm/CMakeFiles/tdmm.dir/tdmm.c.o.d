@@ -1,4 +1,4 @@
-CMakeFiles/tdmm.dir/libtdmm/tdmm.o: \
+libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o: \
  /u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.c \
  /usr/include/stdc-predef.h \
  /u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.h \

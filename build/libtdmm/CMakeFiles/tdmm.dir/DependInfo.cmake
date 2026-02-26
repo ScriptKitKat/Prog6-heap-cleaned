@@ -8,9 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.c" "CMakeFiles/tdmm.dir/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.o" "gcc" "CMakeFiles/tdmm.dir/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.o.d"
-  "/u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.c" "CMakeFiles/tdmm.dir/libtdmm/tdmm.o" "gcc" "CMakeFiles/tdmm.dir/libtdmm/tdmm.o.d"
-  "/u/pjy263/cs429/Prog-Heap-cleaned/main.c" "CMakeFiles/tdmm.dir/main.o" "gcc" "CMakeFiles/tdmm.dir/main.o.d"
+  "/u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.c" "libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o" "gcc" "libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o.d"
   )
 
 # Targets to which this target links which contain Fortran sources.

@@ -1,4 +1,9 @@
-FILE(GLOB_RECURSE TDMM_SOURCES "*.c")
-MESSAGE(STATUS "TDMM_LIB_SOURCES: ${TDMM_SOURCES}")
-add_library(tdmm STATIC ${TDMM_SOURCES})
-target_include_directories(tdmm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})
+cmake_minimum_required(VERSION 3.16)
+project(hw6)
+
+set(CMAKE_C_STANDARD 99)
+
+add_subdirectory(libtdmm)
+
+add_executable(hw6 main.c)
+target_link_libraries(hw6 tdmm)
