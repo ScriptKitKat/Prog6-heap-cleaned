@@ -1,0 +1,3 @@
+/u/pjy263/cs429/Prog6-Heap/build/CMakeFiles/tdmm.dir
+/u/pjy263/cs429/Prog6-Heap/build/CMakeFiles/edit_cache.dir
+/u/pjy263/cs429/Prog6-Heap/build/CMakeFiles/rebuild_cache.dir

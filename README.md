@@ -1,0 +1,60 @@
+
+
+To do:
+Initialization routines
+tmalloc()
+tfree()
+implementation of first fit, best fit, and worst fit
+data structure that tracks all currently allocated objects
+data structure that tracks all free regions of memory
+Statistics gathering models
+
+any pointer that tmalloc returns must be a multiple of 4.
+
+All data structures should be allocated on the region returned by mmap. Usage of libc's malloc is not allowed.
+
+----- PLANNING -----
+Block Header (Node object).
+struct BlockHeader {
+    size;
+    is_free;
+    BlockHeader *next;
+    BlockHeader *prev;
+}
+
+struct allocatorState {
+    strategy;
+    BlockHeader* free_list;
+    BlockHeader* heap_list;
+}
+
+Have a static variable of the allocator state so you don't have to malloc it --> it's a global variable
+
+Initialization routines: sets up allocator state before anything else
+- Set strategy of the allocator
+- Call mmap to obtain initial heap region:
+```
+#include <sys/mman.h>
+void mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0)
+```
+- cast allocated memory reigon to BlockHeader, size = allocated reigion - BlockHeader, point free_list and heap_list to this block of memory
+
+tmalloc(): returns a pointer to an allocated reigon in memory
+- Alignment of memory (must be a multiple of 4): bitshift so requested size is a mulitple of 4.
+- Needs to find free locations in memory to allocate (adds to the allocated memory list) --> algorithm is best/first/worst fit. Where the block size is >= size.
+- must split a block if the block is larger than the memory size and update pointers & sizes
+- If there is not enough space, it must call mmap() --> increases the size of its data segment by allocating more memory.
+- Set is_free = 0, return pointer address immediately after the header
+
+tfree():
+- Get the header (*block = (BlockHeader*)pter - 1) & mark free
+- Merge freed fragments (coalescing)
+- Add them to the freed memory list
+
+
+data structure that tracks all currently allocated objects:
+- map of pointer to object size and address
+data structure that tracks all free regions of memory:
+- linkedlist to track memory locations
+
+*/
