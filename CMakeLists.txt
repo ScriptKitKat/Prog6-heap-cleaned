@@ -1,13 +1,4 @@
-cmake_minimum_required(VERSION 3.10)
-project(TDMM)
-
-# Set output directory for libraries to root build directory
-set(CMAKE_ARCHIVE_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR})
-
-# Add the libtdmm subdirectory
-add_subdirectory(libtdmm)
-
-# Create the main executable
-add_executable(mftester main.c)
-target_link_libraries(mftester PRIVATE tdmm)
-target_include_directories(mftester PRIVATE libtdmm)
+FILE(GLOB_RECURSE TDMM_SOURCES "*.c")
+MESSAGE(STATUS "TDMM_LIB_SOURCES: ${TDMM_SOURCES}")
+add_library(tdmm STATIC ${TDMM_SOURCES})
+target_include_directories(tdmm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

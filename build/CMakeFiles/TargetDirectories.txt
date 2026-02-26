@@ -1,6 +1,3 @@
-/u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles/mftester.dir
+/u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles/tdmm.dir
 /u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles/edit_cache.dir
 /u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles/rebuild_cache.dir
-/u/pjy263/cs429/Prog-Heap-cleaned/build/libtdmm/CMakeFiles/tdmm.dir
-/u/pjy263/cs429/Prog-Heap-cleaned/build/libtdmm/CMakeFiles/edit_cache.dir
-/u/pjy263/cs429/Prog-Heap-cleaned/build/libtdmm/CMakeFiles/rebuild_cache.dir

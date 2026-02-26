@@ -1,6 +1,7 @@
-CMakeFiles/mftester.dir/main.c.o: \
- /u/pjy263/cs429/Prog-Heap-cleaned/main.c /usr/include/stdc-predef.h \
- /u/pjy263/cs429/Prog-Heap-cleaned/./libtdmm/tdmm.h \
+CMakeFiles/tdmm.dir/libtdmm/tdmm.o: \
+ /u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.c \
+ /usr/include/stdc-predef.h \
+ /u/pjy263/cs429/Prog-Heap-cleaned/libtdmm/tdmm.h \
  /usr/lib/gcc/x86_64-linux-gnu/13/include/stddef.h \
  /usr/include/x86_64-linux-gnu/sys/mman.h /usr/include/features.h \
  /usr/include/features-time64.h \
