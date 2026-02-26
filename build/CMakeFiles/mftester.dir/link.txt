@@ -1,0 +1,1 @@
+/usr/bin/cc CMakeFiles/mftester.dir/main.c.o -o mftester  libtdmm.a 

@@ -1,4 +1,2 @@
-FILE(GLOB_RECURSE TDMM_SOURCES "*.c")
-MESSAGE(STATUS "TDMM_LIB_SOURCES: ${TDMM_SOURCES}")
-add_library(tdmm STATIC ${TDMM_SOURCES})
+add_library(tdmm STATIC tdmm.c)
 target_include_directories(tdmm PUBLIC ${CMAKE_CURRENT_SOURCE_DIR})

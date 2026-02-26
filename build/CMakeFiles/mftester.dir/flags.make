@@ -4,7 +4,7 @@
 # compile C with /usr/bin/cc
 C_DEFINES = 
 
-C_INCLUDES = -I/u/pjy263/cs429/Prog6-Heap
+C_INCLUDES = -I/u/pjy263/cs429/Prog-Heap-cleaned/libtdmm
 
 C_FLAGS = 
 

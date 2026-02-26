@@ -87,14 +87,14 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles /u/pjy263/cs429/Prog-Heap-cleaned/build//CMakeFiles/progress.marks
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(CMAKE_COMMAND) -E cmake_progress_start /u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles /u/pjy263/cs429/Prog-Heap-cleaned/build/libtdmm//CMakeFiles/progress.marks
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtdmm/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /u/pjy263/cs429/Prog-Heap-cleaned/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 clean
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtdmm/clean
 .PHONY : clean
 
 # The main clean target
@@ -103,68 +103,56 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtdmm/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 preinstall
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtdmm/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
-#=============================================================================
-# Target rules for targets named mftester
+# Convenience name for target.
+libtdmm/CMakeFiles/tdmm.dir/rule:
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 libtdmm/CMakeFiles/tdmm.dir/rule
+.PHONY : libtdmm/CMakeFiles/tdmm.dir/rule
 
-# Build rule for target.
-mftester: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 mftester
-.PHONY : mftester
-
-# fast build rule for target.
-mftester/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mftester.dir/build.make CMakeFiles/mftester.dir/build
-.PHONY : mftester/fast
-
-#=============================================================================
-# Target rules for targets named tdmm
-
-# Build rule for target.
-tdmm: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tdmm
+# Convenience name for target.
+tdmm: libtdmm/CMakeFiles/tdmm.dir/rule
 .PHONY : tdmm
 
 # fast build rule for target.
 tdmm/fast:
-	$(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/build
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/build
 .PHONY : tdmm/fast
 
-main.o: main.c.o
-.PHONY : main.o
+tdmm.o: tdmm.c.o
+.PHONY : tdmm.o
 
 # target to build an object file
-main.c.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mftester.dir/build.make CMakeFiles/mftester.dir/main.c.o
-.PHONY : main.c.o
+tdmm.c.o:
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/tdmm.c.o
+.PHONY : tdmm.c.o
 
-main.i: main.c.i
-.PHONY : main.i
+tdmm.i: tdmm.c.i
+.PHONY : tdmm.i
 
 # target to preprocess a source file
-main.c.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mftester.dir/build.make CMakeFiles/mftester.dir/main.c.i
-.PHONY : main.c.i
+tdmm.c.i:
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/tdmm.c.i
+.PHONY : tdmm.c.i
 
-main.s: main.c.s
-.PHONY : main.s
+tdmm.s: tdmm.c.s
+.PHONY : tdmm.s
 
 # target to generate assembly for a file
-main.c.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/mftester.dir/build.make CMakeFiles/mftester.dir/main.c.s
-.PHONY : main.c.s
+tdmm.c.s:
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(MAKE) $(MAKESILENT) -f libtdmm/CMakeFiles/tdmm.dir/build.make libtdmm/CMakeFiles/tdmm.dir/tdmm.c.s
+.PHONY : tdmm.c.s
 
 # Help Target
 help:
@@ -174,11 +162,10 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... mftester"
 	@echo "... tdmm"
-	@echo "... main.o"
-	@echo "... main.i"
-	@echo "... main.s"
+	@echo "... tdmm.o"
+	@echo "... tdmm.i"
+	@echo "... tdmm.s"
 .PHONY : help
 
 
@@ -190,6 +177,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	$(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /u/pjy263/cs429/Prog-Heap-cleaned/build && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

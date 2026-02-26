@@ -1,2 +1,0 @@
-/usr/bin/ar qc libtdmm.a CMakeFiles/tdmm.dir/CMakeFiles/3.28.3/CompilerIdC/CMakeCCompilerId.o CMakeFiles/tdmm.dir/libtdmm/tdmm.o CMakeFiles/tdmm.dir/main.o
-/usr/bin/ranlib libtdmm.a
