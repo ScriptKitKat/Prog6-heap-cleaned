@@ -41,7 +41,7 @@ void *t_malloc(size_t size) {
 			prev_ptr = ptr;
 			ptr = ptr->next;
 		}
-
+		
 		// expand in size
 		if(ptr == NULL) {
 			size_t sizeUp = (size_needed > sizeof(char) * 4096) ? size_needed * 2 : sizeof(char) * 4096;

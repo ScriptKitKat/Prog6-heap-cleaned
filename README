@@ -1,6 +1,11 @@
+Name: Priscilla Ye
+EID: pjy263
 
+How to run build code: ./build.sh
 
-To do:
+To run: libtdmm.a
+
+# ----- PLANNING -----
 Initialization routines
 tmalloc()
 tfree()
@@ -13,7 +18,6 @@ any pointer that tmalloc returns must be a multiple of 4.
 
 All data structures should be allocated on the region returned by mmap. Usage of libc's malloc is not allowed.
 
------ PLANNING -----
 Block Header (Node object).
 struct BlockHeader {
     size;
@@ -33,10 +37,9 @@ Have a static variable of the allocator state so you don't have to malloc it -->
 Initialization routines: sets up allocator state before anything else
 - Set strategy of the allocator
 - Call mmap to obtain initial heap region:
-```
 #include <sys/mman.h>
 void mmap(NULL, size, PROT_READ | PROT_WRITE, MAP_ANONYMOUS, -1, 0)
-```
+
 - cast allocated memory reigon to BlockHeader, size = allocated reigion - BlockHeader, point free_list and heap_list to this block of memory
 
 tmalloc(): returns a pointer to an allocated reigon in memory
@@ -56,5 +59,3 @@ data structure that tracks all currently allocated objects:
 - map of pointer to object size and address
 data structure that tracks all free regions of memory:
 - linkedlist to track memory locations
-
-*/
